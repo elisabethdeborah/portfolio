@@ -255,9 +255,9 @@ const kontakta_mig = [
 const projekt = [
 	{
 		title: "Toma\u00ADtodo",
-		url: "/tomatodo/",
+		url: "/#",
 		githubRepo: "https://github.com/elisabethdeborah/tomatodo",
-		description: "Tomatodo är mitt examensarbete under utbildningen till frontend developer. Jag har använt mig av next.js, och sanity för att skapa en app för time management.\n\nAppen kombinerar en todo-list-app med ett bibliotek för att spara tidtagna uppgifter, som sedan kan läggas till i todo-listor. Todo-objekten kan sedan starta en nedräkning, som visar tiden genom att ändra bakgrundsfärgen från grön till röd, utöver att visa siffror och animera tidsåtgången med en pie-chart och en progressbar. Användaren skapar en egen profil och sparar sin egen data.",
+		description: "Tomatodo är mitt examensarbete under utbildningen till frontend developer. Jag har använt mig av next.js, och sanity för att skapa en webbapp för time management.\n\nAppen kombinerar en todo-list-app med ett bibliotek för att spara tidtagna uppgifter, som sedan kan läggas till i todo-listor. Todo-objekten kan sedan starta en nedräkning, som visar tiden genom att ändra bakgrundsfärgen från grön till röd, utöver att visa siffror och animera tidsåtgången med en pie-chart och en progressbar. Användaren skapar en egen profil och sparar sin egen data. I nuläget är appen inte deployed.",
 		tools: ["Next.js", "Sanity", "Sass", "GROQ"],
 		imgSrc: "assets/images/exjobb.png",
 		alt: "Tomatodo screenshot",
@@ -275,7 +275,7 @@ const projekt = [
 	},
 	{
 		title: "Flickr API",
-		url: "/flickr-projekt/",
+		url: "https://elisabethdeborah.github.io/flickr-projekt/",
 		githubRepo: "https://github.com/elisabethdeborah/flickr-projekt",
 		description: "Hämtar data från Flickr:s API utifrån användarens input.\n\nSlutuppgift i kursen JavaScript 1.",
 		tools: ["HTML", "CSS", "JavaScript", "Flickr API"],
@@ -285,7 +285,7 @@ const projekt = [
 	},
 	{
 		title: 'Lunch\u00ADtips',
-		url: "/lunchtips/", 
+		url: "https://elisabethdeborah.github.io/lunchtips/", 
 		githubRepo: "https://github.com/elisabethdeborah/lunchtips",
 		description: "Ett projekt jag gjorde för skojs skull när jag precis började lära mig JavaScript.\n\nProjektet rekommenderar ett eller flera av mina tio favorit-lunchställen i Borås centrum baserat på väder och temperatur. Rekommendationen görs för lunchtid, kl 11-14, samma dag eller dagen efter och väderprognoserna kommer från SMHI.",
 		tools: ["HTML", "CSS", "JavaScript", "SMHI API"],
@@ -295,7 +295,7 @@ const projekt = [
 	},
 	{
 		title: "Hang Man",
-		url: "/hang-man/",
+		url: "https://elisabethdeborah.github.io/hang-man/",
 		githubRepo: "https://github.com/elisabethdeborah/hang-man",
 		description: "Hänga gubbe, på tid.\n\nVidareutveckling av ett grupparbete i skolan.",
 		tools: ["HTML", "CSS", "JavaScript"],
