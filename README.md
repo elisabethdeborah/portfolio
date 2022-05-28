@@ -1,6 +1,6 @@
 ## Elisabeth Rumar - Portfolio
 
-## Publicerad på https://elisabethrumar.netlify.app
+# Publicerad på https://elisabethrumar.netlify.app
 
 
 Jag är frontend-utvecklare som tar examen från Handelsakademin i Göteborg i juni 2022. Jag älskar känslan när jag kan få en applikation att fungera precis som jag vill och tycker att det är jättespännande att känna att jag utvecklas som frontendare.",
