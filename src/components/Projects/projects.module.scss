@@ -54,6 +54,9 @@
 		&:hover {
 			.projectLinks {
 				background-color: $color-projectlinks-bg;
+				> svg {
+					fill: $color-projectlinks-bg;
+				}
 			}
 		}
 	}
