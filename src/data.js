@@ -255,9 +255,9 @@ const kontakta_mig = [
 const projekt = [
 	{
 		title: "Toma\u00ADtodo",
-		url: "/#",
+		url: "/https://tomatodoapp.netlify.app",
 		githubRepo: "https://github.com/elisabethdeborah/tomatodo",
-		description: "Tomatodo är mitt examensarbete under utbildningen till frontend developer. Jag har använt mig av next.js, och sanity för att skapa en webbapp för time management.\n\nAppen kombinerar en todo-list-app med ett bibliotek för att spara tidtagna uppgifter, som sedan kan läggas till i todo-listor. Todo-objekten kan sedan starta en nedräkning, som visar tiden genom att ändra bakgrundsfärgen från grön till röd, utöver att visa siffror och animera tidsåtgången med en pie-chart och en progressbar. Användaren skapar en egen profil och sparar sin egen data. I nuläget är appen inte deployed.",
+		description: "Tomatodo är mitt examensarbete under utbildningen till frontend developer. Jag har använt mig av next.js, och sanity för att skapa en webbapp för time management.\n\nAppen kombinerar en todo-list-app med ett bibliotek för att spara tidtagna uppgifter, som sedan kan läggas till i todo-listor. Todo-objekten kan sedan starta en nedräkning, som visar tiden genom att ändra bakgrundsfärgen från grön till röd, utöver att visa siffror och animera tidsåtgången med en pie-chart och en progressbar. Användaren skapar en egen profil och sparar sin egen data. Det går också att testa i en demo utan att skapa en profil.Deployed via Netlify.",
 		tools: ["Next.js", "Sanity", "Sass", "GROQ"],
 		imgSrc: "assets/images/exjobb.png",
 		alt: "Tomatodo screenshot",
