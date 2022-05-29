@@ -13,34 +13,94 @@
 	height: fit-content;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
+	gap: 3px;
 	flex-wrap: wrap;
 	padding-bottom: 50px;
 	border-bottom: 2px solid #efbcca8c;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
 
-	.js {
+.gridItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	min-height: 100px;
+}
+
+.logoMain {
+    width: 90px;
+    max-height: 100px;
+    height: 100%;
+	//margin: 10px;
+	border-radius: 5px;
+
+	&.react {
+		transform: scale(1.15);
+	}
+
+	&.js {
 		transform: scale(1.1);
 		z-index: 0;
 	}
 
-	.pixi {
-		max-width: 130px;
+	&.pixi {
+		max-width: 80px;
 	}
-}
+	&.webflow {
+		width: 110px;
+	}
 
-.logoMain {
-    width: 100px;
-    max-height: 100px;
-    height: 100%;
-	margin: 10px;
-	border-radius: 5px;
+	&.typescript {
+		max-width: 85px;
+	}
+
+	&.sass {
+		transform: scale(1.2);
+		z-index: 0;
+	}
+	&.sanity {
+		width: 120px;
+	}
+
+	&.gsap {
+		width: 75px;
+	}
+
+	&.express {
+		transform: scale(1.3);
+	}
 
 	@media screen and (min-width: 600px) {
 		width: auto;
 		max-height: 75px;
-		max-width: 170px;
+		max-width: 125px;
 		height: 100%;
+
+		&.pixi {
+			max-width: 85px;
+		}
+		&.webflow {
+			max-width: 120px;
+		}
+
+		&.sass {
+			transform: scale(1);
+			max-height: 125px;
+			z-index: 0;
+		}
+
+		&.sanity {
+			max-width: 120px;
+		}
+
+		&.express {
+			max-height: 85px;
+			transform: scale(1);
+		}
 	}
 }
 

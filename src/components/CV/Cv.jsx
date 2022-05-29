@@ -31,7 +31,22 @@ const Cv = ({ cvData, cvFrontendData }) => {
 						<h3>{obj.type}</h3>
 						
 						{obj.items.map((program, index) => (
-							<CvCard key={`task-${index}-${program.title}-${program.dates}-${obj.type}-${program}`} obj={obj} index={index} program={program} infoIsVisible={infoIsVisible} handleClickCard={handleClickCard} />
+							<div 
+								key={`${obj.type}-${index}-${obj.items.dates}-fed`}
+								className={styles.frontendCv}
+							>
+								<h4>{program.title}</h4>
+								<span>{program.dates}</span>
+								<p>{program.place}</p>
+								<p>{program.other}</p>
+								<ul> 
+									{program.tasks?.map((task) => (
+										<li key={`task-${index}-${program.title}-${program.dates}-${obj.type}-${task}mmm`}>
+											{task}
+										</li>
+									))}
+								</ul>
+							</div>
 						))}
 					</article>
 				))}
@@ -39,7 +54,11 @@ const Cv = ({ cvData, cvFrontendData }) => {
 			</section>
 			<div className={styles.allHeader}>
 				<h2>CV - alla kategorier</h2>
-				<h2 className={clsx(styles.plus, {[styles.up]:showAllCv})} onClick={() => setShowAllCv(!showAllCv)}>&#10507;</h2>
+				<div className={styles.arrowPlaceholder}/>
+				<article className={styles.readMore}>
+					<span>{showAllCv? ' Dölj ' : 'Läs mer'}</span>
+					<h2 className={clsx(styles.plus, {[styles.up]:showAllCv})} onClick={() => setShowAllCv(!showAllCv)}>&#10507;</h2>
+				</article>
 			</div>
 			{ showAllCv && (
 			<section className={styles.experience}>

@@ -23,7 +23,7 @@ const ProjectItem = ({project, index, allLogos}) => {
 				[styles.item7]: index === 6,
 			})}
 		>
-			<div className={styles.projectLinks}>
+			<div className={clsx(styles.projectLinks, {[styles.hide]: infoIsVisible})}>
 				{ project.githubRepo ? (
 				<>
 					<a href={project.url} target="_blank" rel="noreferrer">{project.title !== 'Examensarbete: - "Tomatodo"'? project.title : 'Tomatodo'}
@@ -99,7 +99,7 @@ const ProjectItem = ({project, index, allLogos}) => {
 						))
 						}
 					</ul>
-					<div className={styles.projectLinks}>
+					<div className={styles.projectLinksBtns}>
 						<BtnGroup hrefs={[project.url, project.githubRepo]}  target="_blank">
 							{project.title !== 'Examensarbete: - "Tomatodo"'? (project.title !== "Sinus Skateboard webshop" ? project.title : 'sinus skateboard') : 'Tomatodo'}
 							<>

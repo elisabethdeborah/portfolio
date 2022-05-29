@@ -16,8 +16,8 @@ const faerdigheter = {
 		"TypeScript", 
 		
 		"Sanity", 
-		"Webflow",
 		"Gsap", 
+		"Webflow",
 		"Pixi.js",
 	],
 	schoolStuff: [

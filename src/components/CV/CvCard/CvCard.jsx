@@ -18,7 +18,7 @@ const CvCard = ({obj, index, program, infoIsVisible, handleClickCard}) => {
 				infoIsVisible && infoIsVisible.showInfo ? (
 					<div 
 						className={clsx(styles.hidden, {
-							[styles.showHidden]: infoIsVisible.showIndex === index && infoIsVisible.program === program.title && infoIsVisible.type === obj.type  
+							[styles.showHidden]: infoIsVisible.showIndex === index && infoIsVisible.program === program.title && infoIsVisible.type === obj.type,
 						})}
 					>
 						<p>{program.other}</p>
