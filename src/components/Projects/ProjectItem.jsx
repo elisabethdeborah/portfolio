@@ -31,7 +31,7 @@ const ProjectItem = ({project, index, allLogos}) => {
 						</span>
 					</a>
 					<a href={project.githubRepo} target="_blank" rel="noreferrer">
-						{project.tools[0]!== "figma" ?` github-repo` : 'figma'}
+						{project.tools[0]!== "Figma" ?` github-repo` : 'figma'}
 						<span>
 							<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
 						</span>
@@ -87,7 +87,7 @@ const ProjectItem = ({project, index, allLogos}) => {
 						<BtnGroup hrefs={[project.url, project.githubRepo]}  target="_blank">
 							{project.title !== 'Examensarbete: - "Tomatodo"'? (project.title !== "Sinus Skateboard webshop" ? project.title : 'sinus skateboard') : 'Tomatodo'}
 							<>
-							{ project.tools[0]!== 'figma' ?
+							{ project.tools[0]!== 'Figma' ?
 							(<>
 								{"repo"} 
 								<img className={styles.icon} src={GithubIcon} alt="githubIcon" />
