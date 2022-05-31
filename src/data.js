@@ -275,7 +275,7 @@ const projekt = [
 	},
 	{
 		title: "Flickr API",
-		url: "https://elisabethdeborah.github.io/flickr-projekt/",
+		url: "https://elisabethdeborah.github.io/flickr-projekt",
 		githubRepo: "https://github.com/elisabethdeborah/flickr-projekt",
 		description: "Hämtar data från Flickr:s API utifrån användarens input.\n\nSlutuppgift i kursen JavaScript 1.",
 		tools: ["HTML", "CSS", "JavaScript", "Flickr API"],
@@ -285,7 +285,7 @@ const projekt = [
 	},
 	{
 		title: 'Lunch\u00ADtips',
-		url: "https://elisabethdeborah.github.io/lunchtips/", 
+		url: "https://elisabethdeborah.github.io/lunchtips", 
 		githubRepo: "https://github.com/elisabethdeborah/lunchtips",
 		description: "Ett projekt jag gjorde för skojs skull när jag precis började lära mig JavaScript.\n\nProjektet rekommenderar ett eller flera av mina tio favorit-lunchställen i Borås centrum baserat på väder och temperatur. Rekommendationen görs för lunchtid, kl 11-14, samma dag eller dagen efter och väderprognoserna kommer från SMHI.",
 		tools: ["HTML", "CSS", "JavaScript", "SMHI API"],
@@ -306,8 +306,8 @@ const projekt = [
 	{
 		title: "quickfix",
 		category: "UX",
-		figma: "https://www.figma.com/file/9QsN1GkAdIs6imeamewjXr/Stickan-%E2%80%93-Elisabeth-Rumar?node-id=0%3A1",
-		prototype: "https://www.figma.com/proto/9QsN1GkAdIs6imeamewjXr/Stickan-%E2%80%93-Elisabeth-Rumar?node-id=139%3A867&scaling=scale-down&page-id=0%3A1&starting-point-node-id=139%3A867",
+		githubRepo: "https://www.figma.com/file/9QsN1GkAdIs6imeamewjXr/Stickan-%E2%80%93-Elisabeth-Rumar?node-id=0%3A1",
+		url: "https://www.figma.com/proto/9QsN1GkAdIs6imeamewjXr/Stickan-%E2%80%93-Elisabeth-Rumar?node-id=139%3A867&scaling=scale-down&page-id=0%3A1&starting-point-node-id=139%3A867",
 		description: "App-design för utlåningsbibliotek med verktyg, på uppdrag från en fikttiv samfällighetsförening.\n\nSlutuppgift i kursen \"UX och Usability\"",
 		tools: ["Figma"],
 		list : ["Målgruppsanalyser och användartester", "Lätthanterliga och lättbegripliga gränssnitt", "Wireframes"],
@@ -315,8 +315,8 @@ const projekt = [
 	{
 		title: "Sinus Skateboard webshop",
 		category: "De\u00ADsign",
-		figma: "https://www.figma.com/file/b6LEaZrtsDdTeZlg5MXYb4/Sinus-Webshop-Elisabeth-Rumar",
-		prototype: "https://www.figma.com/proto/b6LEaZrtsDdTeZlg5MXYb4/Sinus-Webshop-Elisabeth-Rumar?scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=1%3A2&node-id=1%3A2",
+		githubRepo: "https://www.figma.com/file/b6LEaZrtsDdTeZlg5MXYb4/Sinus-Webshop-Elisabeth-Rumar?node-id=0%3A1",
+		url: "https://www.figma.com/proto/b6LEaZrtsDdTeZlg5MXYb4/Sinus-Webshop-Elisabeth-Rumar?scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=1%3A2&node-id=1%3A2",
 		description: "Desktopesign för webshopen \"Sinus skateboards\".\n\nSlutuppgift i kursen \"Grafiska verktyg för gränssnittsdesign\"",
 		tools: ["Figma"],
 		list: ["Design och layout", "Färglära", "Typografi"],

@@ -24,35 +24,19 @@ const ProjectItem = ({project, index, allLogos}) => {
 			})}
 		>
 			<div className={clsx(styles.projectLinks, {[styles.hide]: infoIsVisible})}>
-				{ project.githubRepo ? (
-				<>
+			<>
 					<a href={project.url} target="_blank" rel="noreferrer">{project.title !== 'Examensarbete: - "Tomatodo"'? project.title : 'Tomatodo'}
 						<span>
 							<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
 						</span>
 					</a>
 					<a href={project.githubRepo} target="_blank" rel="noreferrer">
-						{` github-repo`}
+						{project.tools[0]!== "figma" ?` github-repo` : 'figma'}
 						<span>
 							<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
 						</span>
 					</a>
 				</>
-				) : (
-				<>
-					<a href={project.prototype} target="_blank" rel="noreferrer">{'prototype'}
-						<span>
-							<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
-						</span>
-					</a>
-					<a href={project.figma} target="_blank" rel="noreferrer">
-						{'figma-skiss'}
-						<span>
-							<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
-						</span>
-					</a>
-				</>
-				)}
 			</div>
 			<h1 
 				className={clsx(styles.bigHeader, {
@@ -103,7 +87,7 @@ const ProjectItem = ({project, index, allLogos}) => {
 						<BtnGroup hrefs={[project.url, project.githubRepo]}  target="_blank">
 							{project.title !== 'Examensarbete: - "Tomatodo"'? (project.title !== "Sinus Skateboard webshop" ? project.title : 'sinus skateboard') : 'Tomatodo'}
 							<>
-							{ project.githubRepo ?
+							{ project.tools[0]!== 'figma' ?
 							(<>
 								{"repo"} 
 								<img className={styles.icon} src={GithubIcon} alt="githubIcon" />
