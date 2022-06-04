@@ -14,7 +14,7 @@ const faerdigheter = {
 		"Node.js", 
 		"Express", 
 		"TypeScript", 
-		
+		"Firestore",
 		"Sanity", 
 		"Gsap", 
 		"Webflow",
@@ -22,11 +22,13 @@ const faerdigheter = {
 	],
 	schoolStuff: [
 		"React", 
+		"Next.js", 
 		"Sass",
-		"Node.js", 
 		"TypeScript", 
+		"Sanity", 
+		"Node.js", 
+		"Firestore",
 		"Express", 
-		"HTML", "CSS", "JavaScript",
 	],
 	internshipStuff: [
 		"React", 

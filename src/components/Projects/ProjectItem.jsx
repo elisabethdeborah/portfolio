@@ -8,10 +8,7 @@ import { useState } from 'react';
 
 const ProjectItem = ({project, index, allLogos}) => {
 	const [infoIsVisible, setInfoIsVisible] = useState(false);
-
-//\x20\x0b 
-	//&#173;
-
+	
 	return (
 		<article onClick={() => setInfoIsVisible(!infoIsVisible)} className={clsx(styles.projectItem, {
 				[styles.item1]: index === 0,
@@ -72,7 +69,8 @@ const ProjectItem = ({project, index, allLogos}) => {
 										[styles.pixi]: logo === 'Pixi.js',
 										[styles.js]: logo === 'JavaScript',
 										[styles.api]: logo === 'SMHI API' || logo === 'Flickr API',
-										[styles.heroku]: logo === 'Heroku'
+										[styles.heroku]: logo === 'Heroku',
+										[styles.firestore]: logo === 'Firestore',
 									})} src={allLogos[logo]} alt={`${allLogos[logo]}-logga`} />
 								) : (
 									<article className={styles.logoPlaceholder}>

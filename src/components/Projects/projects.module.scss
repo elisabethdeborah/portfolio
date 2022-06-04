@@ -177,7 +177,6 @@
 	width: 50px;
 	height: auto;
 	margin: 10px;
-	border-radius: 5px;
 
 	&.js {
 		transform: scale(1.1);
@@ -195,14 +194,15 @@
 	}
 
 	&.heroku {
-		height: 50px;
-		width: auto;
+		height: auto;
+		width: 30px;
 	}
 
 	@media screen and (min-width: 600px) {
 		width: auto;
 		max-height: 45px;
 		max-width: 135px;
+		min-width: 45px;
 		height: 100%;
 
 		&.js {
@@ -220,8 +220,15 @@
 			margin: 0;
 		}
 		&.heroku {
-			height: auto;
 			width: auto;
+			max-height: 45px;
+			max-width: 135px;
+			min-width: 30px;
+			height: 100%;
+		}
+
+		&.firestore {
+			min-height: 55px;
 		}
 	}
 }
