@@ -26,7 +26,8 @@ const CvCardTwo = ({ obj, index, item, handleClickCard, infoIsVisible }) => {
 					<p>{program.credits}</p>
 					{ infoIsVisible && infoIsVisible.showInfo && program.kurser ? (
 						<div className={clsx(styles.hidden, {[styles.showHidden]: infoIsVisible.showIndex === index && infoIsVisible.program === program.name && infoIsVisible.type === program.type  })}>
-							<ul> {program.kurser?.map((task) => (
+							<p>{program.other}</p>
+							<ul> {program.kurser.map((task) => (
 								<li key={`task-${index}-${program.title}-${program.dates}-${obj.type}-${task}kkk`}>
 									{task}
 								</li>
