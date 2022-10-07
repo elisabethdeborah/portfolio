@@ -1,7 +1,6 @@
 import styles from './btnGroup.module.scss';
 
 const BtnGroup = ({hrefs, target, children}) => {
-	console.log(hrefs, target, children); 
 	return(
 	<div className={styles.heroBtns}>
 		{children.map((child, index) => (
