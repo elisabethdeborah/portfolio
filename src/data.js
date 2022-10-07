@@ -1,8 +1,62 @@
 const om_mig = {
 	intro: 
-		"Jag är frontend-utvecklare som tar examen från Handelsakademin i Göteborg i juni 2022. Jag älskar känslan när jag kan få en applikation att fungera precis som jag vill och tycker att det är jättespännande att känna att jag utvecklas som frontendare.",
-	aboutMe: 
-		"Jag är frontend-utvecklare som tar examen från Handelsakademin i Göteborg i juni 2022. Jag brinner för kreativ design och känner att jag verkligen har hittat rätt i frontendutveckling.\nJag har alltid varit intresserad av färg och form, och gillar att rita och skapa på olika sätt. Därför tycker jag att det är extra roligt att kunna skapa interaktiv design. Jag älskar känslan när jag kan få en applikation att fungera precis som jag vill och tycker att det är jättespännande att känna att jag utvecklas som frontendare.."
+		"Jag är en nyexad frontendutvecklare med en examen från Handelsakademin i Göteborg. Jag älskar känslan när jag kan få en applikation att fungera precis som jag vill och tycker att det är jättespännande att känna att jag utvecklas som frontendare.",
+	aboutMe: {
+		text: 
+			"Jag är en nyexaminerad frontendutvecklare som älskar att skapa interaktiva upplevelser och göra design levande. Jag är nyfiken och gillar att lära mig nya tekniker och fördjupa mig i de jag redan har erfarenhet av. Allra bäst trivs jag när jag får jobba tillsammans med andra och gillar att bolla tankar och idéer. Som utvecklare med juristbakgrund får jag möjlighet att vara kreativ och samtidigt tillämpa de analytiska och problemlösande förmågor som jag har från juristtiden.",
+		qualities: [
+			"Kreativ",
+			"Nyfiken",
+			"Prestigelös",
+			"Empatisk"
+		],
+		languages: [
+			{
+				lang: "Svenska",
+				level: "modersmål",
+			},
+			{
+				lang: "Engelska",
+				level: "flytande",
+			},
+			{
+				lang: "Hebreiska",
+				level: "nybörjare",
+			},
+			{
+				lang: "Ryska",
+				level: "nybörjare",
+			}
+		],
+		hobbies: [
+			{
+				name: "running",
+				imgSrc: "assets/images/x",
+				alt: "Löpsko",
+			},
+			{
+				name: "biking",
+				imgSrc: "assets/images/x",
+				alt: "Landsvägscykel",
+			},
+			{
+				name: "jumprope",
+				imgSrc: "assets/images/x",
+				alt: "Hopprep",
+			},
+			{
+				name: "drawing",
+				imgSrc: "assets/images/x",
+				alt: "Färgpennor",
+			},
+			{
+				name: "painting",
+				imgSrc: "assets/images/x",
+				alt: "Palett och pensel",
+			}
+		]
+	}
+		
 };
 
 const faerdigheter = {
@@ -19,6 +73,7 @@ const faerdigheter = {
 		"Gsap", 
 		"Webflow",
 		"Pixi.js",
+		"Figma"
 	],
 	schoolStuff: [
 		"React", 
@@ -29,6 +84,7 @@ const faerdigheter = {
 		"Node.js", 
 		"Firestore",
 		"Express", 
+		"Figma"
 	],
 	internshipStuff: [
 		"React", 
@@ -41,6 +97,7 @@ const faerdigheter = {
 		"Next.js", 
 		"Sanity", 
 		"Sass", 
+		"Figma"
 	],
 };
 
@@ -58,8 +115,11 @@ const cv = [
 					"Gsap", 
 					"Pixijs", 
 					"Webflow",
+					"Git",
+					"Bitbucket",
+					"Agilt – Kanban"
 				],
-				other: "LIA som frontendutvecklare på Hoy, 2 perioder på totalt 24 veckor. Jag har jobbat mycket i React för att göra interaktiva informationssidor som ska visas vid lanseringar och mässor. Jag har även gjort en hemsida i Webflow och har uppdaterat delar av ett gammalt Wordpress-projekt. Samtliga projekt har byggts med Sass utifrån Figmaskisser. I några projekt har jag använt Gsap och Pixi.js för animationer och grafer."
+				other: "LIA som frontendutvecklare på Hoy, 2 perioder på totalt 24 veckor. Jag jobbade mycket i React för att göra interaktiva informationssidor som skulle visas vid lanseringar och mässor. Jag gjorde även en hemsida i Webflow och uppdaterade delar av ett gammalt Wordpress-projekt. Samtliga projekt byggde utifrån Figmaskisser och samtliga, förutom Webflow-projektet, stylades med Sass. I några projekt använde jag Gsap och Pixi.js för animationer och grafer."
 			},
 		]
 	},
@@ -72,7 +132,7 @@ const cv = [
 						place: "Handelsakademin, Göteborg",
 						dates: "HT 2020 - VT 2022",
 						credits: "400 YP",
-						kurser: [
+						tasks: [
 							"HTML och CSS",
 							"JavaScript 1",
 							"Grafiska verktyg för gränssnittsdesign",
@@ -85,7 +145,7 @@ const cv = [
 							"Examensarbete",
 							"Lärande i arbete (LIA) 2",
 						], 
-						other: "Yrkeshögskoleutbildning i frontendutveckling där vi även gjort vissa fullstackprojekt. Vi har framför allt jobbat i React, med och utan Typescript. Vi har även byggt egna backends i Node.js och Express. Vi har berört state management, med Redux och lite snabbt med Recoil.\n\nMycket av stylingen har gjorts med Sass och CSS-moduler. Genom hela utbildningen har vi använt Github för versionshantering. Utöver kodandet har vi också jobbat mycket med Figma och designat alla våra projekt där. Vi har även lärt oss grundläggande UX och UI-design, med fokus på användarvänlighet och tillgänglighetsanpassning."
+						other: "Yrkeshögskoleutbildning i frontendutveckling där vi även gjorde vissa fullstackprojekt. Vi jobbade framför allt  i React, med och utan Typescript. Vi byggde även egna backends i Node.js och Express. Vi berörde state management, med Redux och lite snabbt med Recoil.\n\nMycket av stylingen gjorde vi med Sass och CSS-moduler. Genom hela utbildningen använde vi Git och Github för versionshantering. Utöver kodandet jobbade vi också mycket med Figma och designade alla våra projekt där. Vi lärde oss även grundläggande UX och UI-design, med fokus på användarvänlighet och tillgänglighetsanpassning samt arbetade agilt med Kanban och Scrum."
 					},
 				],
 			},
@@ -105,22 +165,25 @@ const cvRegular = [
 					"Gsap", 
 					"Pixijs", 
 					"Webflow",
+					"Git",
+					"Bitbucket",
+					"Agilt – Kanban"
 				],
-				other: "LIA som frontendutvecklare på Hoy, 2 perioder på totalt 24 veckor. Jag har jobbat mycket i React för att göra interaktiva informationssidor som ska visas vid lanseringar och mässor. Jag har även gjort en hemsida i Webflow och har uppdaterat delar av ett gammalt Wordpress-projekt. Samtliga projekt har byggts med Sass utifrån Figmaskisser. I några projekt har jag använt Gsap och Pixi.js för animationer och grafer."
+				other: "LIA som frontendutvecklare på Hoy, 2 perioder på totalt 24 veckor. Jag jobbade mycket i React för att göra interaktiva informationssidor som skulle visas vid lanseringar och mässor. Jag gjorde även en hemsida i Webflow och uppdaterade delar av ett gammalt Wordpress-projekt. Samtliga projekt byggde utifrån Figmaskisser och samtliga, förutom Webflow-projektet, stylades med Sass. I några projekt använde jag Gsap och Pixi.js för animationer och grafer."
 			},
 			{
 				place: "Jerusalem Institute of Justice, Jerusalem",
 				title: "Jurist",
 				dates: "september 2014 - november 2014",
-				tasks: ["Skriva rapporter", "Genomföra intervjuer", "Göra rättsutredningar"],
-				other: "Praktik som jurist, totalt 3 månader på plats i Jerusalem, Israel."
+				tasks: ["Jag skrev rapporter", "Jag genomförde intervjuer", "Jag gjorde rättsutredningar"],
+				other: "Jag gjorde 2,5 månaders uppsatspraktik på Jerusalem Institute of Justice (JIJ) i Jerusalem, Israel. Där arbetade jag med att skriva rapporter om mänskliga rättigheter, intervjua personer inför rapporterna samt hjälpte till vid event som anordnades av JIJ."
 			},
 			{
 				place: "Wittulsbergs Juridiska AB, Uppsala",
 				title: "Jurist",
 				dates: "2013 - 2014",
-				tasks: ["Skriva inlagor och överklaganden av asylärenden", "Göra rättsutredningar inom migrationsrätt"],
-				other: "Praktik som jurist, ca 4 timmar/vecka vid sidan av studier."
+				tasks: ["Jag skrev inlagor och överklaganden av asylärenden", "Jag gjorde rättsutredningar inom migrationsrätt"],
+				other: "Jag gjorde praktik som jurist, ca 4 timmar/vecka vid sidan av mina studier."
 			}
 		]
 	},
@@ -149,7 +212,7 @@ const cvRegular = [
 							"Examensarbete",
 							"Lärande i arbete (LIA) 2",
 						], 
-						other: "Yrkeshögskoleutbildning i frontendutveckling där vi även gjort vissa fullstackprojekt. Vi har framför allt jobbat i React, med och utan Typescript. Vi har även byggt egna backends i Node.js och Express. Vi har berört state management, med Redux och lite snabbt med Recoil.\n\nMycket av stylingen har gjorts med Sass och CSS-moduler. Genom hela utbildningen har vi använt Github för versionshantering. Utöver kodandet har vi också jobbat mycket med Figma och designat alla våra projekt där. Vi har även lärt oss grundläggande UX och UI-design, med fokus på användarvänlighet och tillgänglighetsanpassning."
+						other: "Yrkeshögskoleutbildning i frontendutveckling där vi även gjorde vissa fullstackprojekt. Vi jobbade framför allt  i React, med och utan Typescript. Vi byggde även egna backends i Node.js och Express. Vi berörde state management, med Redux och lite snabbt med Recoil.\n\nMycket av stylingen gjorde vi med Sass och CSS-moduler. Genom hela utbildningen använde vi Git och Github för versionshantering. Utöver kodandet jobbade vi också mycket med Figma och designade alla våra projekt där. Vi lärde oss även grundläggande UX och UI-design, med fokus på användarvänlighet och tillgänglighetsanpassning samt arbetade agilt med Kanban och Scrum."
 					},
 					{
 						degree: "Jurist",
@@ -168,7 +231,6 @@ const cvRegular = [
 							"Rätt och psykologi", 
 							"Examensarbete \"Religionsfriheten under den Palestinska myndigheten i ljuset av Palestinska myndighetens tillträde till ICCPR\".", 
 						],
-						other: "Jag gjorde uppsatspraktik på Jerusalem Institute of Justice (JIJ) i Jerusalem, Israel. Där arbetade jag med att skriva rapporter om mänskliga rättigheter, intervjua personer inför rapporterna samt hjälpte till vid event som anordnades av JIJ."
 					}
 				]
 			},
@@ -205,35 +267,35 @@ const cvRegular = [
 				title : "Kriminalvårdare",
 				dates: "2021 - pågående",
 				tasks: [],
-				other: "Sommarvikarie på heltid somrarna 2021 och 2022, extrajobb timmar vid sidan av studier 2021-2022"
+				other: "Sommarvikariat/extrajobb där jag arbetar klientnära på anstalt och jobbar med människor med olika bakgrunder, erfarenheter och förutsättningar"
 			},
 			{
 				place: "Borås tingsrätt, Borås",
 				title : "Tingsnotarie",
 				dates: "april 2017 – oktober 2019",
-				tasks: ["Förberett och handlagt domstolsärenden", "Skrivit egna beslut i domstolsärenden och tvistemål", "Skrivit förslag till domar i tvistemål och brottmål", "Skrivit egna domar i brottmål", "Suttit som ordförande i egna domstolsförhandlingar i brottmål" ],
-				other: "Sedvanlig notarietjänstgöring vid tingsrätt."
+				tasks: ["Jag förberedde och handlade domstolsärenden", "Jag skrev egna beslut i domstolsärenden och tvistemål", "Jag skrev förslag till domar i tvistemål och brottmål", "Jag skrev egna domar i brottmål", "Jag satt som ordförande i egna domstolsförhandlingar i brottmål" ],
+				other: "Jag medverkade i olika delar av rättegångsprocesser i allmän domstol. Jag tog även på mig en inofficiell roll för att lära upp nya notarier och bygga en öppen stämning i arbetsgruppen, med smidigare introduktion och bättre samarbete som resultat."
 			},
 			{
 				place: "Scandinavian Human Rights Lawyers, Uppsala",
 				title : "Biträdande jurist",
 				dates: "januari 2017 – mars 2017",
-				tasks: ["Skriva inlagor och överklaganden av asylärenden", "Göra rättsutredningar inom migrationsrätt"],
-				other: "Extrajobb, migrationsrätt"
+				tasks: ["Jag skrev inlagor och överklaganden av asylärenden", "Jag gjorde rättsutredningar inom migrationsrätt"],
+				other: "Jag jobbade extra med migrationsrätt samtidigt som jag pluggade språk."
 			},
 			{
 				place : "Wittulsbergs Juridiska AB, Uppsala",
 				title : "Biträdande jurist",
 				dates: "juni 2015 - december 2015",
-				tasks: ["Skriva inlagor och överklaganden av asylärenden", "Göra rättsutredningar"],
-				other: "Heltid, asyl- och migrationsrätt samt avtalsrätt."
+				tasks: ["Jag skrev inlagor och överklaganden av asylärenden", "Jag gjorde rättsutredningar"],
+				other: "Jag jobbade heltid med asyl- och migrationsrätt samt avtalsrätt."
 			},
 			{
 				place : "Wittulsbergs Juridiska AB, Uppsala",
 				title : "Juristassistent",
 				dates: "2014 - 1015",
 				tasks: [],
-				other: "Extrajobb vid sidan av studier."
+				other: "Jag jobbade extra samtidigt som jag pluggade på juristprogrammet."
 			}
 		]
 	},
