@@ -25,7 +25,7 @@ const Cv = ({ cvData, cvFrontendData }) => {
 		<section id="cv" className={styles.cvWrapper}>
 			<section className={styles.experience}>
 				<h2>{'CV – frontend\u00ADutveckling'}</h2>
-				<div className={styles.cardContainer}>
+				<div className={styles.cardContainerFED}>
 				{cvFrontendData.map((obj, index) => (
 					<article className={styles.cvItem} key={`${obj.type}frontend-${index}-${obj.items.dates}`}>
 						<h3>{obj.type}</h3>

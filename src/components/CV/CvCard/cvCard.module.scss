@@ -36,13 +36,17 @@
 	}
 
 	&.second {
-		color: $color-text-hint;
-		background-color: $color-text-lightgrey;
+		color: #fff;
+		background-color: #5b5b5bc7;
 
 		.showHidden {
-			background-color: #e4e1e2;
-			transform: translateY(87px);
+			transform: translateY(140px);
 			transition: transform 0.2s ease-in-out;
+			color: #fff;
+			background-color: #7f7f7f;
+			@media screen and (max-width: 445px) {
+				transform: translateY(155px);
+			}
 		}
 	}
 
@@ -52,7 +56,7 @@
 
 		.showHidden {
 			background-color: #393838;
-			transform: translateY(87px);
+			transform: translateY(140px);
 			transition: transform 0.2s ease-in-out;
 		}
 	}
@@ -63,7 +67,7 @@
 
 		.showHidden {
 			background-color: #fadfe6;
-			transform: translateY(100px);
+			transform: translateY(140px);
 			transition: transform 0.2s ease-in-out;
 		}
 	}
@@ -93,16 +97,6 @@
 		font-family: $font-family-thin;
 	}
 	
-	span {
-		font-size: 0.75rem;
-		display: inline;
-		margin: 10px 0 0 25px;
-		padding-bottom: 5px;
-		width: fit-content;
-		max-width: 70%;
-		border-bottom: 1px solid $color-text-hint;
-	}
-	
 	ul {
 		list-style: outside;
 		font-size: 0.75rem;
@@ -120,7 +114,6 @@
 		hyphens: auto;
 	}
 }
-			
 
 .hidden {
 	position: absolute;
@@ -181,15 +174,15 @@
 	flex-wrap: wrap;
 	margin: 0;
 	transition: all 0.2s ease-in-out;
-	grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax( 1fr));
 	grid-template-rows: max-content;
 	gap: 50px;
 	margin: 20px 0 100px;
 
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: 800px) {
 		grid-template-rows: max-content;
 		gap: 20px;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 		margin: 50px auto 100px;
 	}
 }
