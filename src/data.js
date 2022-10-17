@@ -119,7 +119,7 @@ const cv = [
 					"Bitbucket",
 					"Agilt – Kanban"
 				],
-				other: "LIA som frontendutvecklare på Hoy, 2 perioder på totalt 24 veckor. Jag jobbade mycket i React för att göra interaktiva informationssidor som skulle visas vid lanseringar och mässor. Jag gjorde även en hemsida i Webflow och uppdaterade delar av ett gammalt Wordpress-projekt. Samtliga projekt byggde utifrån Figmaskisser och samtliga, förutom Webflow-projektet, stylades med Sass. I några projekt använde jag Gsap och Pixi.js för animationer och grafer."
+				other: "LIA som frontendutvecklare på Hoy, 2 perioder på totalt 24 veckor.\n\nJag jobbade mycket i React för att göra interaktiva informationssidor som skulle visas vid lanseringar och mässor. Jag gjorde även en hemsida i Webflow och uppdaterade delar av ett gammalt Wordpress-projekt.\n\nSamtliga projekt byggde utifrån Figmaskisser och samtliga, förutom Webflow-projektet, stylades med Sass. I några projekt använde jag Gsap och Pixi.js för animationer och grafer."
 			},
 		]
 	},
@@ -172,7 +172,7 @@ const cvRegular = [
 				other: "LIA som frontendutvecklare på Hoy, 2 perioder på totalt 24 veckor. Jag jobbade mycket i React för att göra interaktiva informationssidor som skulle visas vid lanseringar och mässor. Jag gjorde även en hemsida i Webflow och uppdaterade delar av ett gammalt Wordpress-projekt. Samtliga projekt byggde utifrån Figmaskisser och samtliga, förutom Webflow-projektet, stylades med Sass. I några projekt använde jag Gsap och Pixi.js för animationer och grafer."
 			},
 			{
-				place: "Jerusalem Institute of Justice, Jerusalem",
+				place: "JIJ, Jerusalem",
 				title: "Jurist",
 				dates: "september 2014 - november 2014",
 				tasks: ["Jag skrev rapporter", "Jag genomförde intervjuer", "Jag gjorde rättsutredningar"],
@@ -263,7 +263,7 @@ const cvRegular = [
 		type:	"Arbetslivserfarenhet",
 		items: [
 			{
-				place: "Kriminalvården, Anstalten Borås, Borås",
+				place: "Anstalten Borås, Borås",
 				title : "Kriminalvårdare",
 				dates: "2021 - pågående",
 				tasks: [],
