@@ -15,9 +15,9 @@ import Express from './assets/images/express.png';
 import Gsap from './assets/images/gsap-greensock.svg';
 import ReactIcon from './assets/images/react.png';
 import Pixijs from './assets/images/pixilogo.png';
-import Html from './assets/images/html.png';
-import Css from './assets/images/css.png';
-import Javascript from './assets/images/javascript.png';
+import HTML from './assets/images/html.png';
+import CSS from './assets/images/css.png';
+import JavaScript from './assets/images/javascript.png';
 import Sass from './assets/images/sass.png';
 import Webflow from './assets/images/webflowlogo.png';
 import Firestore from './assets/images/firestorelogo.svg';
@@ -26,10 +26,10 @@ import Api from './assets/images/api.png';
 import Figma from './assets/images/figma-1.svg';
 
 function App() {
-let data ={...importedData};
+let data ={ ...importedData };
 
 const scrollRef = useRef(null);
-const [isIntersecting, setIsIntersecting] = useState(false);
+const [ isIntersecting, setIsIntersecting ] = useState(false);
 
 const obsFunc = entries => {
 	entries.forEach(entry => {
@@ -49,31 +49,31 @@ useEffect(() => {
 }, []);
 
 const allLogos = {
-	HTML: Html,
-	CSS: Css,
-	JavaScript: Javascript,
+	HTML,
+	CSS,
+	JavaScript,
 	React: ReactIcon,
-	Sass: Sass,
+	Sass,
 	'Node.js': Nodejs,
-	Express: Express,
-	TypeScript: TypeScript,
+	Express,
+	TypeScript,
 	'Next.js': NextjsLogo, 
-	Sanity: Sanity, 
-	Webflow: Webflow,
-	Gsap: Gsap,
+	Sanity, 
+	Webflow,
+	Gsap,
 	'Pixi.js': Pixijs,
-	Heroku: Heroku,
-	Firestore: Firestore,
+	Heroku,
+	Firestore,
 	'Flickr API': Api,
 	'SMHI API': Api,
-	Figma: Figma,
+	Figma,
 };
 
   return (
     <div className="App">
 		<Header scrollRef={scrollRef} data={data}  />
 		<Navigation data={data} isStuck={isIntersecting} />
-		<Experience allLogos={allLogos} faerdigheter={data.faerdigheter} />
+		<Experience faerdigheter={data.faerdigheterObjs} />
 		<Projects allLogos={allLogos} projects={data.projekt} />
 		<Cv cvData={data.cvRegular} cvFrontendData={data.cv} />
 		<Footer contact={data.kontakta_mig} />

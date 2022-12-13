@@ -2,32 +2,40 @@ import React from 'react';
 import styles from './experience.module.scss';
 import clsx from 'clsx';
 
-const Experience = ({ faerdigheter, allLogos }) => (
-	<section className={styles.experienceWrapper}>
-		<article className={styles.logoContainer} >
-		{faerdigheter.allStuff.map((logo, index) =>  (
-			<div className={styles.gridItem} key={`${logo}-${index}-${logo}-1`} >
-				{allLogos[logo] ? (
-					<img index={index} className={clsx(styles.logoMain, {
-						[styles.pixi]: logo === 'Pixi.js',
-						[styles.js]: logo === 'JavaScript',
-						[styles.webflow]: logo === 'Webflow',
-						[styles.typescript]: logo === 'TypeScript',
-						[styles.sass]: logo === 'Sass',
-						[styles.react]: logo === 'React',
-						[styles.gsap]: logo === 'Gsap',
-						[styles.sanity]: logo === 'Sanity',
-						[styles.express]: logo === 'Express',
-					})} src={allLogos[logo]} alt={`${allLogos[logo]}-logga`} />
-				) : (
-					<article className={styles.logoPlaceholder}>
-						<h5>{logo}</h5>
-					</article>
-				)}
-			</div>
-		))}
-		</article>
-	</section>
-);
+const Experience = ({ faerdigheter }) => {
+	const { allStuff } = faerdigheter;
+	return (
+		<section className={styles.experienceWrapper}>
+			<article className={styles.logoContainer} >
+			{allStuff.map((logo, index) =>  (
+				<div className={styles.gridItem} key={`${logo.alt}-${index}-${logo.imgSrc}-1`} >
+					{logo.imgSrc && logo.type ? (
+						<img 
+							className={clsx(styles.logoMain, {
+								[styles.pixi]: logo.imgSrc === 'pixilogo',
+								[styles.js]: logo.imgSrc === 'javascript',
+								[styles.webflow]: logo.imgSrc === 'webflowlogo',
+								[styles.typescript]: logo.imgSrc === 'typescript',
+								[styles.sass]: logo.imgSrc === 'sass',
+								[styles.react]: logo.imgSrc === 'react',
+								[styles.gsap]: logo.imgSrc === 'gsap-greensock',
+								[styles.sanity]: logo.imgSrc === 'sanitylogo',
+								[styles.express]: logo.imgSrc === 'express',
+							})} 
+							key={`logos-${index + 1}`} 
+							src={require(`../../assets/images/${logo.imgSrc}.${logo.type}`)} 
+							alt={logo.alt}
+							/>
+					) : (
+						<article className={styles.logoPlaceholder}>
+							<h5>{logo}</h5>
+						</article>
+					)}
+				</div>
+			))}
+			</article>
+		</section>
+	);
+};
 
 export default Experience;

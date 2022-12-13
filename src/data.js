@@ -3,7 +3,7 @@ const om_mig = {
 		"Jag är en nyexad frontendutvecklare med en examen från Handelsakademin i Göteborg. Jag älskar känslan när jag kan få en applikation att fungera precis som jag vill och tycker att det är jättespännande att känna att jag utvecklas som frontendare.",
 	aboutMe: {
 		text: 
-			"Jag är en nyexaminerad frontendutvecklare som älskar att skapa interaktiva upplevelser och göra design levande. Jag är nyfiken och gillar att lära mig nya tekniker och fördjupa mig i de jag redan har erfarenhet av. Allra bäst trivs jag när jag får jobba tillsammans med andra och gillar att bolla tankar och idéer. Som utvecklare med juristbakgrund får jag möjlighet att vara kreativ och samtidigt tillämpa de analytiska och problemlösande förmågor som jag har från juristtiden.",
+			" Som nyexaminerad tror jag att en av mina styrkor är att jag är nyfiken och alltid vill lära mig nya tekniker och nya sätt att lösa problem. Allra bäst trivs jag när jag får jobba tillsammans med andra och gillar att bolla tankar och idéer.",
 		qualities: [
 			"Kreativ",
 			"Nyfiken",
@@ -31,27 +31,27 @@ const om_mig = {
 		hobbies: [
 			{
 				name: "running",
-				imgSrc: "assets/images/x",
+				imgSrc: "runningshoe-icon",
 				alt: "Löpsko",
 			},
 			{
 				name: "biking",
-				imgSrc: "assets/images/x",
+				imgSrc: "bike-icon",
 				alt: "Landsvägscykel",
 			},
 			{
 				name: "jumprope",
-				imgSrc: "assets/images/x",
+				imgSrc: "jumprope-icon",
 				alt: "Hopprep",
 			},
 			{
 				name: "drawing",
-				imgSrc: "assets/images/x",
+				imgSrc: "pencils-icon",
 				alt: "Färgpennor",
 			},
 			{
 				name: "painting",
-				imgSrc: "assets/images/x",
+				imgSrc: "palette-icon",
 				alt: "Palett och pensel",
 			}
 		]
@@ -101,6 +101,164 @@ const faerdigheter = {
 	],
 };
 
+const faerdigheterObjs = {
+	allStuff: [
+		{
+			imgSrc: "html",
+			alt: "HTML-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "css",
+			alt: "CSS-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "javascript",
+			alt: "JavaScript-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "react",
+			alt: "React-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "sass",
+			alt: "Sass-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "nextlogo", //svg
+			alt: "Next.js-logga",
+			type: "svg"
+		}, 
+		{
+			imgSrc: "nodelogo",
+			alt: "Node.js-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "express",
+			alt: "Express-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "typescript",
+			alt: "Typescript-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "firestorelogo", //svg
+			alt: "Firestore-logga",
+			type: "svg"
+		}, 
+		{
+			imgSrc: "sanitylogo",
+			alt: "Sanity-logga",
+			type: "svg"
+		}, 
+		{
+			imgSrc: "gsap-greensock", //svg
+			alt: "Gsap-logga",
+			type: "svg"
+		}, 
+		{
+			imgSrc: "webflowlogo",
+			alt: "Webflow-logga",
+			type: "png"
+		}, 
+		{
+			imgSrc: "pixilogo",
+			alt: "Pixi.js",
+			type: "png"
+		}, 
+		{
+			imgSrc: "figma-1", //svg
+			alt: "Figma",
+			type: "svg"
+		}, 
+	],
+	schoolStuff: [
+		{
+			imgSrc: "react",
+			alt: "React-logga"
+		}, 
+		{
+			imgSrc: "nextlogo", //svg
+			alt: "Next.js-logga"
+		}, 
+		{
+			imgSrc: "sass",
+			alt: "Sass-logga"
+		}, 
+		{
+			imgSrc: "typescript",
+			alt: "Typescript-logga"
+		}, 
+		{
+			imgSrc: "sanitylogo",
+			alt: "Sanity-logga"
+		}, 
+		{
+			imgSrc: "nodelogo",
+			alt: "Node.js-logga"
+		}, 
+		{
+			imgSrc: "firestorelogo", //svg
+			alt: "Firestore-logga"
+		}, 
+		{
+			imgSrc: "express",
+			alt: "Express-logga"
+		}, 
+		{
+			imgSrc: "figma-1", //svg
+			alt: "Figma"
+		}, 
+	],
+	internshipStuff: [
+		{
+			imgSrc: "react",
+			alt: "React-logga"
+		}, 
+		{
+			imgSrc: "sass",
+			alt: "Sass-logga"
+		}, 
+		{
+			imgSrc: "webflowlogo",
+			alt: "Webflow-logga"
+		}, 
+		{
+			imgSrc: "gsap-greensock", //svg
+			alt: "Gsap-logga"
+		}, 
+		{
+			imgSrc: "pixilogo",
+			alt: "Pixi.js"
+		}, 
+	],
+	finalProjectStuff: [
+		{
+			imgSrc: "nextlogo", //svg
+			alt: "Next.js-logga"
+		}, 
+		{
+			imgSrc: "sanitylogo",
+			alt: "Sanity-logga"
+		},
+		{
+			imgSrc: "sass",
+			alt: "Sass-logga"
+		}, 
+		{
+			imgSrc: "figma-1", //svg
+			alt: "Figma"
+		}, 
+	],
+};
+
 const cv = [
 	{
 		type: "LIA",
@@ -127,7 +285,6 @@ const cv = [
 		type: "Utbildning",
 				items: [ 
 					{
-						degree: "Frontend developer",
 						title: "Frontend developer",
 						place: "Handelsakademin, Göteborg",
 						dates: "HT 2020 - VT 2022",
@@ -194,12 +351,11 @@ const cvRegular = [
 				title: "Examen",
 				items: [ 
 					{
-						degree: "Frontend developer",
 						name: "Frontend developer",
 						place: "Handelsakademin, Göteborg",
 						dates: "HT 2020 - VT 2022",
 						credits: "400 YP",
-						kurser: [
+						tasks: [
 							"HTML och CSS",
 							"JavaScript 1",
 							"Grafiska verktyg för gränssnittsdesign",
@@ -215,12 +371,11 @@ const cvRegular = [
 						other: "Yrkeshögskoleutbildning i frontendutveckling där vi även gjorde vissa fullstackprojekt. Vi jobbade framför allt  i React, med och utan Typescript. Vi byggde även egna backends i Node.js och Express. Vi berörde state management, med Redux och lite snabbt med Recoil.\n\nMycket av stylingen gjorde vi med Sass och CSS-moduler. Genom hela utbildningen använde vi Git och Github för versionshantering. Utöver kodandet jobbade vi också mycket med Figma och designade alla våra projekt där. Vi lärde oss även grundläggande UX och UI-design, med fokus på användarvänlighet och tillgänglighetsanpassning samt arbetade agilt med Kanban och Scrum."
 					},
 					{
-						degree: "Jurist",
 						name: "Juristexamen",
 						place: "Uppsala universitet",
 						dates: "HT 2010 - HT 2014",
 						credits: "270 HP",
-						kurser: [			
+						tasks: [			
 							"Terminskurs 1: Grundläggande juridisk metod, statsrätt och konstitutionell EU-rätt",
 							"Terminskurs 2: Civilrätt - avtalsrätt, skadeståndsrätt",
 							"Terminskurs 3: Civilrätt - sakrätt, immaterialrätt",
@@ -231,6 +386,7 @@ const cvRegular = [
 							"Rätt och psykologi", 
 							"Examensarbete \"Religionsfriheten under den Palestinska myndigheten i ljuset av Palestinska myndighetens tillträde till ICCPR\".", 
 						],
+						other: "Juristprogrammet på Uppsala universitet."
 					}
 				]
 			},
@@ -323,7 +479,7 @@ const projekt = [
 		githubRepo: "https://github.com/elisabethdeborah/tomatodo",
 		description: "Tomatodo är mitt examensarbete under utbildningen till frontend developer. Jag har använt mig av next.js, och sanity för att skapa en webbapp för time management.\n\nAppen kombinerar en todo-list-app med ett bibliotek för att spara tidtagna uppgifter, som sedan kan läggas till i todo-listor. Todo-objekten kan sedan starta en nedräkning, som visar tiden genom att ändra bakgrundsfärgen från grön till röd, utöver att visa siffror och animera tidsåtgången med en pie-chart och en progressbar. Användaren skapar en egen profil och sparar sin egen data. Det går också att testa i en demo utan att skapa en profil.Deployed via Netlify.",
 		tools: ["Next.js", "Sanity", "Sass", "GROQ"],
-		imgSrc: "assets/images/exjobb.png",
+		imgSrc: "exjobb.png",
 		alt: "Tomatodo screenshot",
 		gridNo: 1
 	},
@@ -333,7 +489,7 @@ const projekt = [
 		githubRepo: "https://github.com/elisabethdeborah/hamster-wars-2",
 		description: "Appen går ut på att jämföra två hamstrar i taget och välja den som är sötast. Varje hamster uppdateras sedan utifrån resultatet, och man kan se hur många matcher hamstern vunnit eller förlorat, samt det totala antalet matcher hamstern har deltagit i.\n\nSlutuppgift i kursen \"Dynamisk webbutveckling\"",
 		tools: ["React", "Node.js", "TypeScript", "Express", "Sass", "Firestore", "Heroku"],
-		imgSrc: "assets/images/hamsterWars",
+		imgSrc: "hamsterWars",
 		alt: "Hamster Wars screenshot",
 		gridNo: 2
 	},
@@ -343,7 +499,7 @@ const projekt = [
 		githubRepo: "https://github.com/elisabethdeborah/flickr-projekt",
 		description: "Hämtar data från Flickr:s API utifrån användarens input.\n\nSlutuppgift i kursen JavaScript 1.",
 		tools: ["HTML", "CSS", "JavaScript", "Flickr API"],
-		imgSrc: "assets/images/fickr2.png",
+		imgSrc: "fickr2.png",
 		alt: "Flickr API screenshot",
 		gridNo: 3
 	},
@@ -353,7 +509,7 @@ const projekt = [
 		githubRepo: "https://github.com/elisabethdeborah/lunchtips",
 		description: "Ett projekt jag gjorde för skojs skull när jag precis började lära mig JavaScript.\n\nProjektet rekommenderar ett eller flera av mina tio favorit-lunchställen i Borås centrum baserat på väder och temperatur. Rekommendationen görs för lunchtid, kl 11-14, samma dag eller dagen efter och väderprognoserna kommer från SMHI.",
 		tools: ["HTML", "CSS", "JavaScript", "SMHI API"],
-		imgSrc: "assets/images/lunchtips2.png",
+		imgSrc: "lunchtips2.png",
 		alt: "Lunchtips screenshot",
 		gridNo: 4,
 	},
@@ -363,7 +519,7 @@ const projekt = [
 		githubRepo: "https://github.com/elisabethdeborah/hang-man",
 		description: "Hänga gubbe, på tid.\n\nVidareutveckling av ett grupparbete i skolan.",
 		tools: ["HTML", "CSS", "JavaScript"],
-		imgSrc: "assets/images/hangman2.png",
+		imgSrc: "hangman2.png",
 		alt: "Hang Man screenshot",
 		gridNo: 5,
 	},
@@ -387,4 +543,4 @@ const projekt = [
 	}
 ];
 
-export { projekt, om_mig, cv, cvRegular, kontakta_mig, faerdigheter, };
+export { om_mig, projekt, cv, cvRegular, kontakta_mig, faerdigheter, faerdigheterObjs };
