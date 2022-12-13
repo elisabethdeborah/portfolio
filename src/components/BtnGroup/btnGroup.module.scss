@@ -8,7 +8,7 @@
 	max-width: 440px;
 	margin: 0 auto;
 
-	a {
+	a, article {
 		position: relative;
 		margin-right: 10px;
 		display: flex;
@@ -36,39 +36,43 @@
 			color: $color-text-primary;
 			border: 1px solid $color-hero-overlay;
 		}
+	}
 
-		&:hover {
-			&:first-child {
-				background-color: $color-text-secondary;
-				color: $color-text-primary;
-				border: 1px solid $color-hero-overlay;
-			}
-	
-			&:last-child {
-				background-color: $color-text-primary;
-				color: $color-text-secondary;
-				transition: all 0.2s ease-in-out;
-				> img {
-					filter: invert(0);
-					transition: all 0.2s ease-in-out;
-				}
-			}
+	a:hover {
+		&:first-child {
+			background-color: $color-text-secondary;
+			color: $color-text-primary;
+			border: 1px solid $color-hero-overlay;
+		}
 
-			transform: translate(2px, 2px);
+		&:last-child {
+			background-color: $color-text-primary;
+			color: $color-text-secondary;
 			transition: all 0.2s ease-in-out;
-
-			filter: drop-shadow(0px 0px $color-hero-overlay);
-			opacity: 1;
+			> img {
+				filter: invert(0);
+				transition: all 0.2s ease-in-out;
+			}
 		}
 
-		&:active {
-			filter: brightness(0.6);
-		}
+		transform: translate(2px, 2px);
+		transition: all 0.2s ease-in-out;
+		filter: drop-shadow(0px 0px $color-hero-overlay);
+		opacity: 1;
+	}
+
+	&:active {
+		filter: brightness(0.6);
+	}
+
+	article:hover {
+		cursor:not-allowed;
 	}
 
 	@media screen and (max-width:700px) {
 		justify-content: center;
-		> a {
+		
+		> a, article {
 			margin-top: 10px;
 			font-size: 0.8rem;
 		}

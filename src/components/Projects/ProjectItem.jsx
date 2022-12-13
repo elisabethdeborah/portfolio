@@ -21,30 +21,28 @@ const ProjectItem = ({project, index, allLogos}) => {
 			})}
 		>
 			<div className={clsx(styles.projectLinks, {[styles.hide]: infoIsVisible})}>
-			<>
-					<a href={project.url} target="_blank" rel="noreferrer">{project.title !== 'Examensarbete: - "Tomatodo"'? project.title : 'Tomatodo'}
-						<span>
-							<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
-						</span>
-					</a>
-					<a href={project.githubRepo} target="_blank" rel="noreferrer">
-						{project.tools[0]!== "Figma" ?` github-repo` : 'figma'}
-						<span>
-							<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
-						</span>
-					</a>
-				</>
+				{project.title.split('\u00AD').join('') !=='Hamster Wars' && (
+				<a href={project.url} target="_blank" rel="noreferrer">
+					{project.title !== 'Examensarbete: - "Tomatodo"'? project.title : 'Tomatodo'}
+					<span>
+						<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
+					</span>
+				</a>
+				)}
+				<a href={project.githubRepo} target="_blank" rel="noreferrer">
+					{project.tools[0]!== "Figma" ?` github-repo` : 'figma'}
+					<span>
+						<img className={styles.goToIcon} src={GoTo} alt="hyperlinkicon" />
+					</span>
+				</a>
 			</div>
-			<h1 
-				className={clsx(styles.bigHeader, {
-					[styles.hide]: infoIsVisible
-				})}
-			>
+			<h1 className={ clsx(styles.bigHeader, {[styles.hide]: infoIsVisible}) } >
 				{project.category ? 
-					<>
-					{project.category} <span className={styles.h3Span}>{project.title}</span>
-					</>
-					: project.title
+				<>
+					{project.category} 
+					<span className={styles.h3Span}>{project.title}</span>
+				</>
+				: project.title
 				}
 			</h1>
 			<section className={clsx(styles.showInfo, {[styles.visible]: infoIsVisible})}>
@@ -54,43 +52,51 @@ const ProjectItem = ({project, index, allLogos}) => {
 				</div>
 				<div className={styles.iconsAndLinks}>
 					{project.list && (
-						<ul className={styles.subList}>
-							{project.list.map((listItem => (
-								<li key={`${project}-${listItem}`}>{listItem}</li>
-							)))}
-						</ul>
+					<ul className={styles.subList}>
+						{project.list.map((listItem => (
+							<li key={`${project}-${listItem}`}>{listItem}</li>
+						)))}
+					</ul>
 					)}
 					<ul className={styles.projectInfo}>
-						{ 
-						project.tools.map((logo, index) => (
+						{project.tools.map((logo, index) => (
 							<div  key={`project-${index}-${project.title}`}>
 								{allLogos[logo] ? (
-									<img key={`project-${index}-${logo}`} index={index} className={clsx(styles.logoMain, {
-										[styles.pixi]: logo === 'Pixi.js',
-										[styles.js]: logo === 'JavaScript',
-										[styles.api]: logo === 'SMHI API' || logo === 'Flickr API',
-										[styles.heroku]: logo === 'Heroku',
-										[styles.firestore]: logo === 'Firestore',
-									})} src={allLogos[logo]} alt={`${allLogos[logo]}-logga`} />
+									<img 
+										key={`project-${index}-${logo}`} index={index} className={ clsx(styles.logoMain, {
+											[styles.pixi]: logo === 'Pixi.js',
+											[styles.js]: logo === 'JavaScript',
+											[styles.api]: logo === 'SMHI API' || logo === 'Flickr API',
+											[styles.heroku]: logo === 'Heroku',
+											[styles.firestore]: logo === 'Firestore',
+										}) } 
+										src={allLogos[logo]}
+										alt={`${allLogos[logo]}-logga`} 
+									/>
 								) : (
 									<article className={styles.logoPlaceholder}>
 										<h5>{logo}</h5>
 									</article>
 								)}
 							</div>
-						))
-						}
+						))}
 					</ul>
 					<div className={styles.projectLinksBtns}>
 						<BtnGroup hrefs={[project.url, project.githubRepo]}  target="_blank">
-							{project.title !== 'Examensarbete: - "Tomatodo"'? (project.title !== "Sinus Skateboard webshop" ? project.title : 'sinus skateboard') : 'Tomatodo'}
+							{project.title !== 'Examensarbete: - "Tomatodo"'? (
+								project.title !== "Sinus Skateboard webshop" ? project.title : 'sinus skateboard'
+								) : (
+								'Tomatodo'
+							)}
 							<>
-							{ project.tools[0]!== 'Figma' ?
-							(<>
-								{"repo"} 
-								<img className={styles.icon} src={GithubIcon} alt="githubIcon" />
-							</> ) : ("figma")
-							}
+								{ project.tools[0]!== 'Figma' ? (
+								<>
+									{"repo"} 
+									<img className={styles.icon} src={GithubIcon} alt="githubIcon" />
+								</> 
+								) : (
+								"figma" 
+								)}
 							</>
 						</BtnGroup>
 					</div>
