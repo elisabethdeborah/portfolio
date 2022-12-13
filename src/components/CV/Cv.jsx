@@ -1,9 +1,8 @@
 import clsx from 'clsx';
-import React from 'react';
 import { useState } from 'react';
 import styles from '../CV/cv.module.scss';
 import CvCard from './CvCard/CvCard';
-import CvCardTwo from './CvCard/CvCardTwo';
+import CvCardLg from './CvCard/CvCardLg';
 
 const Cv = ({ cvData, cvFrontendData }) => {
 
@@ -11,11 +10,13 @@ const Cv = ({ cvData, cvFrontendData }) => {
 	const [showAllCv, setShowAllCv] = useState(false);
 
 	const handleClickCard = (index, program, type) => {
-		if (!infoIsVisible) {
-			setInfoIsVisible({...infoIsVisible, showInfo: true})
+		if ( !infoIsVisible ) {
+			setInfoIsVisible({showInfo: true, showIndex: index, program: program, type: type});
+		} else if ( infoIsVisible && infoIsVisible.showIndex !== index ) {
+			setInfoIsVisible(false);
 			setTimeout(() => {
 				setInfoIsVisible({showInfo: true, showIndex: index, program: program, type: type});
-			}, 100);
+			}, 200);
 		} else {
 			setInfoIsVisible(false);	
 		}
@@ -23,41 +24,27 @@ const Cv = ({ cvData, cvFrontendData }) => {
 
 	return (
 		<section id="cv" className={styles.cvWrapper}>
+			<h2>{'CV – frontend\u00ADutveckling'}</h2>
 			<section className={styles.experience}>
-				<h2>{'CV – frontend\u00ADutveckling'}</h2>
-				<div className={styles.cardContainerFED}>
+				<div className={styles.outerCardContainer}>
 				{cvFrontendData.map((obj, index) => (
-					<article className={styles.cvItem} key={`${obj.type}frontend-${index}-${obj.items.dates}`}>
-						<h3>{obj.type}</h3>
-						
-						{obj.items.map((program, index) => (
-							<div 
-								key={`${obj.type}-${index}-${obj.items.dates}-fed`}
-								className={styles.frontendCv}
-							>
-								<h4>{program.title}</h4>
-								<span>{program.dates}</span>
-								<p>{program.place}</p>
-								<p>{program.other}</p>
-								<ul> 
-									{program.tasks?.map((task) => (
-										<li key={`task-${index}-${program.title}-${program.dates}-${obj.type}-${task}mmm`}>
-											{task}
-										</li>
-									))}
-								</ul>
-							</div>
-						))}
-					</article>
+					<CvCardLg
+						key={`${obj.type}-${index}-${obj.dates}-two`}
+						obj={cvFrontendData}
+						index={`${cvFrontendData.type}-${index}-${obj.dates}-index`}
+						item={obj}
+						infoIsVisible={infoIsVisible}
+						clickable={false}
+					/>
 				))}
 				</div>
 			</section>
-			<div className={styles.allHeader}>
+			<div className={styles.allHeader}  onClick={() => setShowAllCv(!showAllCv)}>
 				<h2>CV - alla kategorier</h2>
 				<div className={styles.arrowPlaceholder}/>
 				<article className={styles.readMore}>
-					<span>{showAllCv? ' Dölj ' : 'Läs mer'}</span>
-					<h2 className={clsx(styles.plus, {[styles.up]:showAllCv})} onClick={() => setShowAllCv(!showAllCv)}>&#10507;</h2>
+					<span>{showAllCv ? ' Dölj ' : 'Läs mer'}</span>
+					<h2 className={clsx(styles.plus, {[styles.up]:showAllCv})}>&#10507;</h2>
 				</article>
 			</div>
 			{ showAllCv && (
@@ -66,15 +53,29 @@ const Cv = ({ cvData, cvFrontendData }) => {
 					<article className={styles.cvItem} key={`${obj.type}-${index}-${obj.items.dates}-hey`}>
 						<h3>{obj.type}</h3>
 						{obj.type !== 'Utbildning' ? (
-							<div className={styles.cardContainer}>
-								{obj.items.map((program, index) => (
-									<CvCard key={`${obj.type}-${index}-${program.dates}-one`} obj={obj} index={index} program={program} infoIsVisible={infoIsVisible} handleClickCard={handleClickCard}  />
-								))}
-							</div>
+						<div className={styles.cardContainer}>
+						{obj.items.map((program, index) => (
+							<CvCard 
+								key={`${obj.type}-${index}-${program.dates}-one`}
+								obj={obj}
+								index={`${obj.type}-${index}-${program.dates}-index`}
+								program={program}
+								infoIsVisible={infoIsVisible}
+								handleClickCard={handleClickCard}
+							/>
+						))}
+						</div>
 						) : (
-							obj.items.map((item, index) => (
-								<CvCardTwo key={`${obj.type}-${index}-${item.dates}-two`} obj={obj} index={index} item={item} infoIsVisible={infoIsVisible} handleClickCard={handleClickCard}  />
-							))
+						obj.items.map((item, index) => (
+							<CvCardLg
+								key={`${obj.type}-${index}-${item.dates}-two`}
+								obj={obj}
+								index={index}
+								item={item}
+								infoIsVisible={infoIsVisible}
+								handleClickCard={handleClickCard}
+							/>
+						))
 						)}
 					</article>
 				))}
