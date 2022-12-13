@@ -42,19 +42,140 @@
 		max-width: 850px;
 		z-index: 1;
 
+		> div {
+			margin: 42px 0;
+		}
 		.intro {
+			position: relative;
+			font-family: $font-family-thin;
 			max-width: 700px;
 			text-align: left;
-			font-family: $font-family-thin;
-			font-size: 1.1em;
+			font-size: 0.85rem;
 			line-height: 1.6em;
 			letter-spacing: 1px;
 			white-space: pre-line;
 			margin: 42px 0;
-			
+			z-index: 1;
+
 			@media screen and (min-width:600px) {
 				width: 80vw;
+				font-size: 1rem;
 			}
+
+			@media screen and (min-width:860px) {
+				font-size: 1.1rem;
+
+				.aboutMeList {
+					justify-content: space-evenly;
+					margin: auto;
+				}
+
+				&::after {
+					z-index: -1;
+					content: ' ';
+					background-color: transparent;
+					position: absolute;
+					top: -6%;
+					left: -2%;
+					bottom: 0;
+					right: 0;
+					height: 110%;
+					width: 120%;
+					max-width: 760px;
+					transition: 200ms ease-in-out;
+				}
+	
+				
+				&.expanded {
+					position: relative;
+					height: fit-content;
+					width: fit-content;
+	
+					&::after {
+						content: ' ';
+						background-color: $color-white-20;
+						border-color: $color-hero-overlay;
+					}
+				}
+			}
+		}
+
+		.introText {
+			font-family: $font-family-thin;
+		}
+
+		
+		.expandAboutMe {
+			position: relative;
+			font-family: $font-family-body;
+			top: -10px;
+			width: fit-content;
+			color: $color-white-80;
+			font-size: 0.75rem;
+			margin-top: 0;
+    		line-height: 1.6em;
+
+			&:hover {
+				cursor: pointer;
+				color: inherit;
+				transition: 0.2s ease-in-out;
+			}
+
+			::after {
+				content: ' ';
+				color: inherit;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				border-top: 1px solid $color-header-bg;
+			}
+		}
+
+		.aboutMeList {
+			font-family: $font-family-body;
+			list-style-type: '\2714';
+			list-style-position: inside;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 85%;
+			align-items: center;
+			flex-wrap: wrap;
+			
+
+			.aboutMeListItem {
+				position: relative;
+				text-align: left;
+				font-family: $font-family-body;
+				font-size: 1.1em;
+				line-height: 1.6em;
+				letter-spacing: 1px;
+				white-space: pre-line;
+				width: fit-content;
+				margin: 0 1rem 2rem 0;
+
+				&::marker {
+					font-size: 1em;
+					color: #363636db;
+					letter-spacing: 8px;
+				}
+
+				&::before {
+					content: ' ';
+						color: inherit;
+						position: absolute;
+						left: -0.15em;
+						top: 0.1em;
+						width: 20px;
+						height: 20px;
+				}
+			}
+		}
+
+		.hobbyListImg {
+			height: 40px;
+			margin-bottom: 1.5em;
 		}
 	}
 
@@ -74,6 +195,7 @@
 	}
 
 	@media screen and (min-width:650px) {
+		
 		min-height: 600px;
 		justify-content: center;
 		.imgContainer {
@@ -137,7 +259,7 @@
 	max-width: 700px;
 	flex-wrap: wrap;
 	font-size: 0.8em;
-	margin: 2rem 0 0;
+	margin: 0;
 	font-family: $font-family-thin;
 
 	.heroparagraph {

@@ -4,8 +4,8 @@ import Hero from './Hero';
 
 const Header = ({ data, scrollRef }) => {
 	return (
-		<section ref={scrollRef} className={styles.headerWrapper}>
-			<Hero faerdigheter={data.faerdigheter} intro={data.om_mig.intro}  />
+		<section id="om_mig" ref={scrollRef} className={styles.headerWrapper}>
+			<Hero faerdigheter={data.faerdigheter} intro={data.om_mig} />
 		</section>
 	)
 };
