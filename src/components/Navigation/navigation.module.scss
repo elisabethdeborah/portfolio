@@ -31,6 +31,14 @@
 
 			.navListItem {
 				margin: 10px;
+				border-bottom: 1px solid transparent;
+				transition: color 200ms ease-in-out 0ms, border-color 200ms ease-in-out 100ms;
+
+				&:hover {
+					color: $color-text-secondary;
+					border-color: inherit;
+					transition: color 100ms ease-in-out 0ms, border-color 200ms ease-in-out 50ms;
+				}
 			}
 		}
 	}
