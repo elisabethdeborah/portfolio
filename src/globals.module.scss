@@ -13,27 +13,41 @@
 	src: url('./assets/fonts/Roboto-Light.ttf');
 }
 
-$color-text-primary: #434343; 
-$color-text-secondary: #fff;
-$color-text-hint: #3d0e1a;
-$color-text-grey: #48353a;
-$color-text-lightgrey: #dcd9dac7;
-$color-text-subheader: #808080;
-
-$color-header-bg: #ffc0cb;
-$color-hero-overlay: #c007504d;
-$color-projectlinks-bg: #ffffffd9;
-
-$color-nav-bg: #ed8ea6;
-$color-nav-text: #efbcca;
+// VARIABLES
+// Greys
 $color-dark-background: #211f1fe3;
-$color-lightgrey-background: #ed8ea649;
+$color-card-bg-dark: #393838;
+$color-text-primary: #434343;
+$color-text-subheader: #808080;
+$color-text-lightgrey: #dcd9dac7;
 
+// Whites
+$color-text-secondary: #fff;
+$color-white-95: #fffffff2;
+$color-white-90: #ffffffe6;
+$color-white-85: #ffffffd9;
+$color-white-80: #ffffffcc;
+$color-white-20: #ffffff33;
+
+// Reds/pinks
+$color-text-hint: #48353a;
+$color-hero-overlay: #c007504d;
+$color-nav-bg: #ed8ea6;
+$color-header-bg: #ffc0cb;
+$text-shadow-lightpink: #fcd;
+$color-card-bg-pink: #fadfe6;
+
+// Fonts
 $font-family-header: basementGrotesque;
 $font-family-body: roboto;
 $font-family-thin: robotoLight;
+
+// Others
+$box-shadow: 0px 3px 10px #2121213b;
+
 $content-width: 1000px;
 
+// STYLES
 * {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
@@ -75,6 +89,7 @@ h1 {
 }
 
 h2 {
+	color: $color-text-hint;
 	font-size: 2rem;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -90,6 +105,12 @@ h2 {
 h3, .h3Span {
 	font-size: 1.375rem;
 	width: fit-content;
+
+	@media screen and (max-width: 600px) {
+		width: 90%;
+		margin: 0 auto 20px;
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -128,12 +149,14 @@ a {
 	font-family: $font-family-header;
 	text-decoration: none;
 	color: inherit;
-	transition: all 0.2s ease-in-out;
 
 	&:hover {
 		cursor: pointer;
-		transition: all 0.2s ease-in-out;
-		color: $color-text-secondary;
 	}
 }
 
+@media screen and (min-width: 600px) {
+	h1, h2 {
+		text-shadow: -5px 5px $text-shadow-lightpink;
+	}
+}
