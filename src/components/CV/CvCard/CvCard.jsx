@@ -1,6 +1,6 @@
 import styles from './cvCard.module.scss';
 import clsx from 'clsx';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
 
 const CvCard = ({ obj, index, program, infoIsVisible, handleClickCard, noHover=false, clickable=true }) => {
 	const initialSize = useRef(null);
@@ -10,38 +10,49 @@ const CvCard = ({ obj, index, program, infoIsVisible, handleClickCard, noHover=f
 	const [isCurrent, setIsCurrent] = useState(false);
 
 
+	
 	useEffect(() => {
 		let initialHeight = initialSize.current.clientHeight;
 		setHeight(`${initialHeight}px`);
 	}, []);
-
-	useEffect(() => {
-		if (infoIsVisible && infoIsVisible.showInfo && infoIsVisible.showIndex === index && !noHover) {
-			setHeight(h =>`${height}px`);
-			setIsCurrent(true);
-			setTimeout(() => {
-				setIsShowing(true);
-				setIsHiding(false);
-				setHeight('fit-content');
-			}, 500); 
-		} else if (!infoIsVisible && isCurrent) {
-			let initialHeight = initialSize.current.clientHeight;
-			setIsHiding(true);
-			setIsShowing(false);
-			setHeight(h => `${initialHeight}px`);
-			setTimeout(() => {
+	
+	const memoizedCallback = useMemo(() => {
+		const evaluate = () => {
+			if (initialSize && initialSize.current) {
+				if (infoIsVisible && infoIsVisible.showInfo && infoIsVisible.showIndex === index && !noHover) {
+				setHeight(height =>`${height}px`);
+				setIsCurrent(true);
+				setTimeout(() => {
+					setIsShowing(true);
+					setIsHiding(false);
+					setHeight('fit-content');
+				}, 500); 
+			} else if (!infoIsVisible && isCurrent) {
+				let initialHeight = initialSize.current.clientHeight;
+				setIsHiding(true);
+				setIsShowing(false);
+				setHeight(height => `${initialHeight}px`);
+				setTimeout(() => {
+					setIsCurrent(false);
+					setIsHiding(false);
+				}, 500);
+			} else if (!infoIsVisible && !isCurrent) {
+				let initialHeight = initialSize.current.clientHeight;
+				setHeight(height => `${initialHeight}px`);
+				setIsShowing(false);
 				setIsCurrent(false);
 				setIsHiding(false);
-			}, 500);
-		} else if (!infoIsVisible && !isCurrent) {
-			let initialHeight = initialSize.current.clientHeight;
-			setHeight(h => `${initialHeight}px`);
-			setIsShowing(false);
-			setIsCurrent(false);
-			setIsHiding(false);
+			};
+			}
 		};
-	}, [infoIsVisible])
-	
+		evaluate();
+	}, [ index, isCurrent, infoIsVisible, noHover]);
+
+	useEffect(() => {
+		memoizedCallback && memoizedCallback()
+	}, [memoizedCallback]);
+
+
 	return (
 		<article 
 			style={clickable ? {'height': `${height}`, 'transition': 'height 1s ease-out, box-shadow 0.5s ease-in-out'}: null}
